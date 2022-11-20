@@ -34,8 +34,7 @@ Upgrade ubuntu
 
 ![Install -y Nodejs](./image/install-y-nodejs-output.PNG)
 
-
-2. **Install MongoDB**
+2.**Install MongoDB**
 
 - MongoDB stores data in flexible, JSON-like documents. Fields in a database can vary from document to document and data structure can be changed over time. For our example application, we are adding book records to MongoDB that contain book name, isbn number, author, and number of pages. mages/WebConsole.gif
 
@@ -59,7 +58,7 @@ Upgrade ubuntu
 
 ![Mongodb Start Service](./image/mongodb-service-start.PNG)
 
-- Verify that the service is up and running
+- Verify that the service is up and running:
 
 `sudo systemctl status mongodb`
 
@@ -91,18 +90,15 @@ We need ‘body-parser’ package to help us process JSON files passed in reques
 
 ![Create Folder Book](./image/book-npm-initialize.PNG)
 
-Add a file to it named server.js:
+- Add a file to it named server.js:
 
 `vi server.js`
 
 ![Server Js Output](./image/server-js-output.PNG)
 
+3.**Install Express and set up routes to the server**
 
-3. **Install Express and set up routes to the server**
-
-- Express is a minimal and flexible Node.js web application framework that provides features for web and mobile applications. We will use Express in to pass book information to and from our MongoDB database.
-
-We also will use Mongoose package which provides a straight-forward, schema-based solution to model your application data. We will use Mongoose to establish a schema for the database to store data of our book register.
+- Express is a minimal and flexible Node.js web application framework that provides features for web and mobile applications. We will use Express in to pass book information to and from our MongoDB database. We also will use Mongoose package which provides a straight-forward, schema-based solution to model your application data. We will use Mongoose to establish a schema for the database to store data of our book register.
 
 `sudo npm install express mongoose`
 
@@ -130,8 +126,7 @@ We also will use Mongoose package which provides a straight-forward, schema-base
 
 ![Create Bookjs File](./image/file-book-js.PNG)
 
-
-4. **Access the routes with AngularJS**
+4.**Access the routes with AngularJS**
 
 -AngularJS provides a web framework for creating dynamic views in your web applications. In this tutorial, we use AngularJS to connect our web page with Express and perform actions on our book register.
 
@@ -179,7 +174,7 @@ Change the directory back to ‘Books’:
 
 - It shall return an HTML page, it is hardly readable in the CLI, but we can also try and access it from the Internet.
 
-For this – you need to open TCP port 3300 in your AWS Web Console for your EC2 Instance.
+For this you need to open TCP port 3300 in your AWS Web Console for your EC2 Instance.
 
 ![Edit Inbound Rules 3300](./image/tcp-3300-output.PNG)
 
@@ -189,7 +184,7 @@ For this – you need to open TCP port 3300 in your AWS Web Console for your EC2
 
 ![Retrieve public IP from Command line](./image/public-ip-from-command-line.PNG)
 
-This is how your Web Book Register Application will look like in browser:
+- This is how your Web Book Register Application will look like in browser:
 
 [Server Url Success Lunch](http://18.216.255.120:3300/)
 
